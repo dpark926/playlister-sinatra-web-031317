@@ -1,0 +1,6 @@
+<p>Shows all Artists</p>
+
+<% @all_artists.each do |each_artist| %>
+  <%artist_slug = each_artist.slug%>
+  <p><a href="/artists/<%=artist_slug%>"><%=each_artist.name%></a></p>
+<%end%>

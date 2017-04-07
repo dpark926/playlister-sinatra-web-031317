@@ -1,0 +1,6 @@
+<p>Shows all Songs</p>
+
+<% @all_songs.each do |each_song| %>
+  <%song_slug = each_song.slug%>
+  <p><a href="/songs/<%=song_slug%>"><%=each_song.name%></a></p>
+<%end%>

@@ -1,0 +1,16 @@
+<h1>This is the Songs Show Page</h1>
+
+<p>Shows all Artists and Genres</p>
+
+<h2>ARTIST</h2>
+<%artist_slug = @song.artist.slug%>
+<a href="/artists/<%=artist_slug%>"><%=@song.artist.name%></a>
+
+
+<h2>GENRES</h2>
+<%@song.genres.each do |genre|%>
+  <%genre_slug = genre.slug%>
+  <ul>
+    <a href="/genres/<%=genre_slug%>"><%=genre.name%></a>
+  </ul>
+<%end%>
